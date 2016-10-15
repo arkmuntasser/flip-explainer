@@ -1,0 +1,45 @@
+.expand .item {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  width: 100%;
+  max-width: 90%;
+  height: 38px;
+  border: 1px solid #cdcdcd;
+  overflow: hidden;
+  transform-origin: 50% 0;
+  cursor: pointer;
+}
+
+.expand .item .item-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.expand .item .item-content { opacity: 0; }
+
+/* Open the item */
+.expand .item.open {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+  will-change: transform;
+}
+
+.expand .item.open .item-title { opacity: 0; }
+
+.expand .item.open .item-title,
+.expand .item.open .item-content { will-change: opacity; }
+
+/* Animate the item */
+.expand .item.animatable { transition: transform .3s ease-in-out; }
+
+.expand .item.animatable .item-title,
+.expand .item.animatable .item-content {
+  opacity: 1;
+  transition: opacity .1s ease-in-out .3s;
+}
