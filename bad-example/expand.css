@@ -7,7 +7,8 @@
   max-width: 90%;
   height: auto;
   max-height: 38px;
-  border: 1px solid #cdcdcd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   background-color: #fff;
   overflow: hidden;
   cursor: pointer;

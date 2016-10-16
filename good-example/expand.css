@@ -6,7 +6,8 @@
   width: 100%;
   max-width: 90%;
   height: 38px;
-  border: 1px solid #cdcdcd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   background-color: #fff;
   overflow: hidden;
   transform-origin: 50% 0;
@@ -31,13 +32,17 @@
   will-change: transform;
 }
 
-.expand .item.open .item-title { opacity: 0; }
+.expand .item.open .item-title,
+.expand .item.closing .item-title { opacity: 0; }
 
 .expand .item.open .item-title,
-.expand .item.open .item-content { will-change: opacity; }
+.expand .item.open .item-content,
+.expand .item.closing .item-title,
+.expand .item.closing .item-content { will-change: opacity; }
 
 /* Animate the item */
-.expand .item.animatable { transition: transform .3s ease-in-out; }
+.expand .item.animatable,
+.expand .item.closing-animatable { transition: transform .3s ease-in-out; }
 
 .expand .item.animatable .item-title,
 .expand .item.animatable .item-content {
