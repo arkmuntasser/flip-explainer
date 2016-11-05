@@ -23,11 +23,11 @@ $(document).ready(function() {
       'will-change' : 'transform'
     });
 
-    if(target.find('[data-list-item-description]').css('min-width') === '0px') {
+    //if(target.find('[data-list-item-description]').css('min-width') === '0px') {
       target.find('[data-list-item-description]').css({
         'min-width' : last.width + 'px'
       });
-    }
+    //}
 
     // Play that funky music
     requestAnimationFrame(function() {
