@@ -1,0 +1,64 @@
+.expand { position: relative; }
+
+.expand .item {
+  position: relative;
+  margin: 0 auto 15px;
+  width: 90%;
+  height: auto;
+}
+.expand .item.open { width: 100%; }
+
+.expand .item .item-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  transform-origin: 50% 0;
+}
+.expand .item.open .item-background {
+  width: 100%;
+  height: 50vh;
+}
+.expand .item.animate .item-background {
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  transition-delay: 0.2s;
+}
+.expand .item.open.animate .item-background { transition-delay: 0s; }
+
+.expand .item .item-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.expand .item.animate .item-inner {
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  transition-delay: 0.2s;
+}
+.expand .item.open.animate .item-inner { transition-delay: 0.0s; }
+
+.expand .item .item-title {
+  padding: 0 15px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.expand .item .item-description {
+  padding: 15px;
+  height: calc(100% - 60px);
+  opacity: 0;
+  overflow: auto;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.expand .item.open .item-description {
+  opacity: 1;
+  transition-delay: 0.2s;
+  pointer-events: all;
+}
