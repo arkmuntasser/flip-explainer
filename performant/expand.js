@@ -43,7 +43,7 @@ $(document).ready(function() {
     });
   };
 
-  root.on('click', '[data-list-item]', function() {
+  root.find('[data-list-item]').on('click', function() {
     var target = $(this);
 
     if(target.hasClass('locked')) {
