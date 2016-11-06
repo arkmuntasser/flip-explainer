@@ -12,9 +12,11 @@ $(document).ready(function() {
     // Invert that bad boy
     var invertWidth = first.width / last.width;
     var invertHeight = first.height / last.height;
+    var invertLeft = first.left - last.left;
+    var invertDescriptionWidth = target.hasClass('open') ? last.width : first.width;
 
     target.find('[data-list-item-inner]').css({
-      'transform' : 'translateX(' + (first.left - last.left) + 'px)',
+      'transform' : 'translateX(' + invertLeft + 'px)',
       'will-change' : "transform"
     });
 
@@ -24,7 +26,7 @@ $(document).ready(function() {
     });
 
     target.find('[data-list-item-description]').css({
-      'min-width' : last.width + 'px'
+      'min-width' : invertDescriptionWidth + 'px'
     });
 
     // Play that funky music
@@ -41,6 +43,7 @@ $(document).ready(function() {
     });
   };
 
+  // Hndle the click event
   root.find('[data-list-item]').on('click', function() {
     var target = $(this);
 
