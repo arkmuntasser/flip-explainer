@@ -5,5 +5,5 @@
 > [Paul Lewis, Developer Advocate at Google, Inc.](https://aerotwist.com/blog/flip-your-animations/)
 
 ## Examples
-* [Performant Implementation](https://arkmuntasser.github.io/flip-explainer/good-example/)
-* [Non-performant Implementation](https://arkmuntasser.github.io/flip-explainer/bad-example/)
+* [Performant Implementation](https://arkmuntasser.github.io/flip-explainer/performant/)
+* [Non-performant Implementation](https://arkmuntasser.github.io/flip-explainer/non-performant/)
